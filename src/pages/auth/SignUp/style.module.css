@@ -1,0 +1,19 @@
+.mainContent {
+  padding: 1em;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+}
+
+.form {
+  margin: 0 auto;
+}
+
+.buttonWrapper {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
