@@ -15,12 +15,6 @@ import styles from './styles.module.css'
 
 const { Header, Content } = Layout
 
-const onLogout = () => {
-  return auth.signOut();
-}
-
-
-
 const Orders = () => {
   const [ordersState, dispatch] = useReducer(ordersReducer, initialstate);
   const user = auth.currentUser;
@@ -78,6 +72,10 @@ const Orders = () => {
       .collection('tentativeOrder').doc(orderId)
       .delete()
     setUpdateOrder(true);
+  }
+
+  const onLogout = () => {
+    return auth.signOut();
   }
 
 

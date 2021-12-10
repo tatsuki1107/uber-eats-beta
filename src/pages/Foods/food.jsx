@@ -49,7 +49,6 @@ const Foods = ({ match }) => {
   }, [])
 
   const submitTetativeOrder = () => {
-    console.log('a');
     db.collection('users')
       .doc(userId)
       .collection('tentativeOrder')
