@@ -1,4 +1,5 @@
 import React, { useEffect, useReducer } from "react";
+import { useHistory } from "react-router";
 import { db, auth } from '../../config/firebase';
 import { Layout, Row, Divider } from "antd";
 import { SideMenu } from "../../component/SideMenu";
@@ -13,6 +14,7 @@ const { Header, Content } = Layout;
 
 const HistoryOrders = () => {
   const [historysState, dispatch] = useReducer(historysReducer, initialstate);
+  const history = useHistory();
   const user = auth.currentUser;
   const userId = user.uid;
 

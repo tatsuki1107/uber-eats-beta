@@ -28,15 +28,15 @@ const App = () => {
 
           <Route exact path='/signup' component={SignUp} />
 
-          <Route
+          <LoggedInRoute
             exact
             path='/:id/foods'
             component={Foods}
           />
 
-          <Route exact path='/order' component={Orders} />
+          <LoggedInRoute exact path='/order' component={Orders} />
 
-          <Route exact path='/history' component={HistoryOrders} />
+          <LoggedInRoute exact path='/history' component={HistoryOrders} />
         </Switch>
       </Router>
     </AuthProvider>
